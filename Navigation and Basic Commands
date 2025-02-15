@@ -7,7 +7,7 @@ ls
 # View current working directory
 pwd
 
-# Displays the mannual page for a command
+# Displays the manual page for a command
 man ls
 
 Moving Files
@@ -44,3 +44,5 @@ rmdir [directory]
 
 #Recursively remove a directory and it's contents
 rm -r [directory]
+
+
