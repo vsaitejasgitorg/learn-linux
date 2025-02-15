@@ -41,3 +41,6 @@ rm example.txt
 rm -i [filename]
 # Removes an empty directory
 rmdir [directory]
+
+#Recursively remove a directory and it's contents
+rm -r [directory]
