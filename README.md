@@ -24,3 +24,6 @@ In Linux, understanding the directory hierarchy is crucial for efficient navigat
 - /usr: User programs and data.
 - /lib: Shared libraries.
 - /tmp: Temporary files. 
+
+Reference
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/4/html/reference_guide/index#index
