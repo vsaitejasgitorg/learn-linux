@@ -5,9 +5,11 @@ The Linux model is built with an emphasis on collaboration, making it easier for
 
 Characteristics of Linux
 
-Open-source - its open-source nature means the source code is accessible to anyone to contribute, modify, and share the code.
-Reliable - its stability and reliable nature make it the perfect choice for critical systems and servers.
-Multitasking and multiuser- it supports multiple users making it easier for resource sharing, additionally it makes it easier for users to run multiple processes.
-Security - it has a wide range of security features including user privilege management, file system permissions, and mandatory access controls.
-Portability - its portability nature has led to its wide adoption in diverse environments from embedded systems and smartphones to servers and supercomputers.
-Command-Line Interface (CLI) - it offers a powerful CLI, providing users with extensive control over system functions.
+- Open-source - its open-source nature means the source code is accessible to anyone to contribute, modify, and share the code.
+- Reliable - its stability and reliable nature make it the perfect choice for critical systems and servers.
+- Multitasking and multiuser- it supports multiple users making it easier for resource sharing, additionally it makes it easier for users to run multiple processes.
+- Security - it has a wide range of security features including user privilege management, file system permissions, and mandatory access controls.
+- Portability - its portability nature has led to its wide adoption in diverse environments from embedded systems and smartphones to servers and supercomputers.
+- Command-Line Interface (CLI) - it offers a powerful CLI, providing users with extensive control over system functions.
+
+  
