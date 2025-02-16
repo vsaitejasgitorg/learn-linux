@@ -5,3 +5,10 @@ Each of these has its own learning curve and set of commands.
 
 For instance, nano is a basic text editor, which is easy to use and perfect for simple text file editing.
 Vi/vim, on the other hand, is more advanced and offers a wide range of features and commands.
+
+
+Using Nano Editor
+Nano is a beginner-friendly and user-friendly text editor available in most Linux distributions. It offers a simple interface with easy controls, making it an excellent choice for those new to command-line editing. To edit a file using Nano, open a terminal and type the following command,
+
+nano filename
+
