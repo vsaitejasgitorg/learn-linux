@@ -12,3 +12,20 @@ Nano is a beginner-friendly and user-friendly text editor available in most Linu
 
 nano filename
 
+Let us example of some basic properties of the nano editor,
+
+Navigation can be done through the keyboard with the arrow keys.
+
+You can also use the Page Up(PgUp) and Page Down(PgDn) keys to scroll through the document quickly.
+
+To start editing the content of the file, move the cursor to the desired location.
+Simply start typing, and the text will be inserted at the cursor position.
+To copy a block of text, move the cursor to the starting position of the block and press Ctrl + ^.
+Then, navigate to the end of the block using the arrow keys. Press Alt + 6 to copy the selected text.
+To paste the copied text, move the cursor to the desired location and press Ctrl + U.
+
+Nano allows you to search for specific words or phrases within a file. To search for a term, press Ctrl + W and enter the search term. Nano will highlight the first occurrence of the term. To find the next occurrence, press Ctrl + W again.
+To replace a term through the file, press Ctrl + , and enter the search term, followed by the replacement term. Then press Enter to perform the replacement.
+To save the changes made to the file, press Ctrl + O. Nano will prompt you to confirm the file name. Press Enter to save the changes and overwrite the existing file. If you wish to save the changes with a different file name, type the new name before pressing Enter.
+To exit Nano after saving changes, press Ctrl + X. If there are unsaved changes, Nano will prompt you to save them before exiting. Press Y to confirm and save the changes, or N to exit without saving.
+Nano provides an interactive help system that can guide you through its features. Press the Ctrl + G shortcut to access the help menu.
