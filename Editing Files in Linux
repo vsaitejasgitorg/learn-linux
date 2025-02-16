@@ -29,3 +29,8 @@ To replace a term through the file, press Ctrl + , and enter the search term, fo
 To save the changes made to the file, press Ctrl + O. Nano will prompt you to confirm the file name. Press Enter to save the changes and overwrite the existing file. If you wish to save the changes with a different file name, type the new name before pressing Enter.
 To exit Nano after saving changes, press Ctrl + X. If there are unsaved changes, Nano will prompt you to save them before exiting. Press Y to confirm and save the changes, or N to exit without saving.
 Nano provides an interactive help system that can guide you through its features. Press the Ctrl + G shortcut to access the help menu.
+
+Using VI Editor
+VI is a powerful and widely used text editor in the Linux community. While it is much harder to learn compared to Nano, mastering VI can greatly enhance your editing capabilities. To edit a file with VI, open a terminal and type the following command,
+
+vi filename
