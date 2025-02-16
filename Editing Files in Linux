@@ -53,3 +53,18 @@ Press the n to find the next occurrence.
 To replace a term, use the following command, go to command mode, and type in the following syntax with
 your values for the search_term and replace_term,
 :%s/search_term/replace_term/g
+
+Using Emacs Editor
+Emacs is a highly extensible and customizable text editor known for its extensive features and powerful scripting capabilities.
+Before exploring emacs, we can check if Emacs is installed on your Linux system by this command,
+
+emacs --version
+
+If Emacs is not found on your Linux system, you can proceed with any of the steps based on your Linux distros for installation,
+
+For Debian/Ubuntu-based systems, we can install Emacs using the apt package manager through the following command,
+sudo apt update
+sudo apt install emacs
+
+For Red Hat/CentOS-based systems, we can install Emacs using the yum package manager through the following command,
+sudo yum install emacs
