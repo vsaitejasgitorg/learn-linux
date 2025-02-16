@@ -34,3 +34,22 @@ Using VI Editor
 VI is a powerful and widely used text editor in the Linux community. While it is much harder to learn compared to Nano, mastering VI can greatly enhance your editing capabilities. To edit a file with VI, open a terminal and type the following command,
 
 vi filename
+
+To switch to insert mode and start editing, press the i key.
+In this mode, you can use the arrow keys to navigate through the file.
+To save changes and exit, follow these steps,
+Press the Esc key to return to command mode.
+Type :wq (write and quit), and hit Enter.
+To save the changes made to the file, press the Esc key followed by the :w and press Enter.
+This command saves the changes without exiting VI. To just exit without saving use the :q option.
+To copy text, position the cursor at the starting location of the text and press yy to copy the current line
+or yw to copy a word.
+To paste the copied text, move the cursor to the desired location and press p to paste the text after the
+cursor or P to paste the text before the cursor.
+VI provides powerful search feature. Follow these steps,
+Go to command mode by pressing Esc.
+Press the / key followed by the search term, and VI will find the first occurrence of the term.
+Press the n to find the next occurrence.
+To replace a term, use the following command, go to command mode, and type in the following syntax with
+your values for the search_term and replace_term,
+:%s/search_term/replace_term/g
