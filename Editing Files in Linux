@@ -68,3 +68,19 @@ sudo apt install emacs
 
 For Red Hat/CentOS-based systems, we can install Emacs using the yum package manager through the following command,
 sudo yum install emacs
+
+
+To edit a file with Emacs, open a terminal and type the following command:
+
+emacs filename
+
+This will launch Emacs and load the specified file. We can edit the file simply by typing the content.
+
+You can use the arrow keys for navigation or the Ctrl key with various combinations to move by words or sentences.
+For instance, Ctrl + B moves the cursor backward.
+To save changes, press Ctrl + X followed by Ctrl + S.
+To exit Emacs, press Ctrl + X followed by Ctrl + C.
+To search, use the Ctrl + S command and enter the search term.
+Emacs will highlight the first occurrence of the term. To find the next occurrence, use Ctrl + S again.
+You can also use Ctrl + R to search backward. To exit the search mode, press Enter.
+To undo changes, use Ctrl + _ or Ctrl + /. You can copy selected text using Ctrl+ W and also paste the copied text using the Ctrl + Y at the desired location.
