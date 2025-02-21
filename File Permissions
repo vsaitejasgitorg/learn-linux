@@ -5,9 +5,27 @@ In fact, permissions on the system are there for a reason: to prevent unprivileg
 
 Let’s have a look at an example:
 
--rwxr--r-- 1 root root 4096 Jan 1 12:00 filename
-From the above example, the first character - indicates if it is a regular file(-) or directory(d). The following group of three characters(rwx) represents the permissions for the file owner. The next three characters(r--) represent permissions for the group and the last set of three characters(r--) represents permissions for others.
+The ls -l command (list with long format) provides detailed information about the file, including its permissions, owner, and group. You should see output similar to this:
 
-The r indicates that the file can be read, w indicates that the file can be written to, and x indicates that the file can be executed.
+-rw-rw-r-- 1 labex labex 0 Jul 29 15:11 example.txt
+Let's break down this output:
 
-The permissions can be changed using the chmod, chown, and chgrp commands.
+-rw-rw-r-- represents the file permissions . The first character indicates the file type ( - for a regular file, d for directory, etc.). The remaining characters represent read, write, and execute permissions for the owner, group, and others.
+The first labex is the current owner of the file. This is the username that owns the file.
+The second labex is the current group of the file. A group is a collection of users that can share permissions.
+0 is the file size in bytes. Since the file is empty, its size is zero.
+Jul 29 15:11 is the last modified date and time.
+example.txt is the file name.
+
+Now, let's change the ownership of the file to the root user. root is the administrator account on Linux systems, and it has special privileges.
+
+sudo chown root:root example.txt
+Here's what this command does:
+
+sudo runs the command with root privileges. You'll likely be prompted for your password. chown requires elevated privileges because it's a powerful command that can affect system security. Without sudo, you'll get a "Permission denied" error.
+chown is the command to change ownership.
+root:root specifies the new owner and group (both set to root). The syntax is owner:group.
+example.txt is the target file.
+
+
+
