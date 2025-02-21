@@ -82,3 +82,17 @@ drwx------ 2 labex labex 6 Feb 22 01:57 /home/labex/test-dir
 labex:project/ $ chmod -R 755 ~/test-dir
 labex:project/ $ ls -ld ~/test-dir
 drwxr-xr-x 2 labex labex 6 Feb 22 01:57 /home/labex/test-dir
+
+
+labex:project/ $ cd ~/project
+echo '#!/bin/bash\necho "Hello, World"' > script.sh
+labex:project/ $ ls -l script.sh
+-rw-rw-r-- 1 labex labex 32 Feb 22 01:59 script.sh
+labex:project/ $ ./script.sh
+zsh: permission denied: ./script.sh
+labex:project/ $ chmod u+x script.sh
+labex:project/ $ ls -l script.sh
+-rwxrw-r-- 1 labex labex 32 Feb 22 01:59 script.sh
+labex:project/ $ ./script.sh        
+Hello, World
+labex:project/ $ 
