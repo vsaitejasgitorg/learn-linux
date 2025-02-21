@@ -28,4 +28,22 @@ root:root specifies the new owner and group (both set to root). The syntax is ow
 example.txt is the target file.
 
 
+labex:project/ $ ls -lR new-dir
+new-dir:
+total 4
+-rw-rw-r-- 1 labex labex 13 Feb 22 01:51 file1.txt
+drwxrwxr-x 2 labex labex 23 Feb 22 01:51 subdir
 
+new-dir/subdir:
+total 4
+-rw-rw-r-- 1 labex labex 13 Feb 22 01:51 file2.txt
+labex:project/ $ sudo chown -R root:root new-dir
+labex:project/ $ ls -lR new-dir                 
+new-dir:
+total 4
+-rw-rw-r-- 1 root root 13 Feb 22 01:51 file1.txt
+drwxrwxr-x 2 root root 23 Feb 22 01:51 subdir
+
+new-dir/subdir:
+total 4
+-rw-rw-r-- 1 root root 13 Feb 22 01:51 file2.txt
