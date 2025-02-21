@@ -73,3 +73,12 @@ labex:project/ $ sudo chmod 700 example.txt
 labex:project/ $ ls -l example.txt         
 -rwx------ 1 root root 0 Feb 22 01:45 example.txt
 labex:project/ $ 
+
+
+labex:project/ $ mkdir ~/test-dir
+chmod 700 ~/test-dir
+labex:project/ $ ls -ld ~/test-dir
+drwx------ 2 labex labex 6 Feb 22 01:57 /home/labex/test-dir
+labex:project/ $ chmod -R 755 ~/test-dir
+labex:project/ $ ls -ld ~/test-dir
+drwxr-xr-x 2 labex labex 6 Feb 22 01:57 /home/labex/test-dir
