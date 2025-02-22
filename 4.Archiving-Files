@@ -50,6 +50,21 @@ To verify the extraction, you can use:
 
 tree extracted_tar
 
+Compressing Files with gzip
+Now that we have created a tar archive, let's compress it using gzip:
+
+gzip test_archive.tar
+
+This command will compress test_archive.tar and rename it to test_archive.tar.gz. The original test_archive.tar file will be replaced by the compressed version.
+
+To see the size of the compressed file, you can use the following command:
+
+ls -lh test_archive.tar.gz
+
+The -lh options will show the file size in a human-readable format (like KB, MB, etc.).
+
+It's worth noting that while the .tar.gz extension is common, you might also see .tgz, which is equivalent.
+
 
 
 
