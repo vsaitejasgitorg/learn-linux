@@ -32,6 +32,24 @@ To view the contents of the archive without extracting it, you can use:
 tar -tvf test_archive.tar
 This command lists (-t) the contents of the archive, verbosely (-v), from the file (-f) named test_archive.tar.
 
+Extracting Files from a tar Archive
+
+mkdir extracted_tar
+tar -xvf test_archive.tar -C extracted_tar
+
+Let's break down this command:
+
+mkdir extracted_tar: This creates a new directory called extracted_tar where we'll put the contents of our archive.
+tar: The command we're using to extract the archive.
+-x: This option tells tar to extract files from an archive.
+-v: This makes the operation verbose, showing us each file as it's extracted.
+-f: This option specifies the name of the archive file to be operated on. When extracting files, it should be followed by the path or name of the tar file to extract.
+-C extracted_tar: This option tells tar to change to the extracted_tar directory before extracting files.
+
+To verify the extraction, you can use:
+
+tree extracted_tar
+
 
 
 
