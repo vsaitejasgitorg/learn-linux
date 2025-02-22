@@ -18,6 +18,20 @@ Let's package our test_dir:
 cd ~/project
 tar -cvf test_archive.tar test_dir
 
+Let's break down this command:
+
+tar: The command we're using to create the archive.
+-c: This option tells tar to create a new archive.
+-v: This stands for "verbose". It makes tar print out the names of the files it's adding to the archive. This is optional but helpful to see what's happening.
+-f: This option is followed by the name of the archive file we want to create.
+test_archive.tar: This is the name we're giving to our new archive file. The .tar extension is conventional for tar archives.
+test_dir: This is the directory we're packaging into the archive.
+
+To view the contents of the archive without extracting it, you can use:
+
+tar -tvf test_archive.tar
+This command lists (-t) the contents of the archive, verbosely (-v), from the file (-f) named test_archive.tar.
+
 
 
 
