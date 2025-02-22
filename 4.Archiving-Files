@@ -104,4 +104,25 @@ The increase in size after packaging is normal and expected. The tar format adds
 Compression, on the other hand, significantly reduces the file size by identifying and eliminating redundancies in the data. This is particularly effective for text files or files with repetitive content.
 
 
+Creating a Compressed Archive in One Step
+While it's helpful to understand the separate steps of creating a tar archive and then compressing it, in practice, these steps are often combined. The tar command has a built-in option to compress the archive using gzip as it's being created.
+
+Let's create a compressed tar archive of our test_dir in one step:
+
+cd ~/project
+tar -czvf test_combined.tar.gz test_dir
+
+This command is similar to what we used before, with one important addition:
+
+-z: This option tells tar to compress the archive using gzip.
+The resulting test_combined.tar.gz file is equivalent to what we created in the previous two steps, but we've done it all at once.
+
+To view the contents of this compressed archive without extracting it:
+
+tar -tzvf test_combined.tar.gz
+
+The -z option here tells tar that we're dealing with a gzip-compressed file.
+
+
+
 
