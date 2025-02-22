@@ -1,1 +1,14 @@
+LAB 
+
+Creating a Sample Directory Structure
+cd ~/project
+mkdir -p test_dir/{subdir1,subdir2}
+echo "This is file 1" > test_dir/file1.txt
+echo "This is file 2" > test_dir/file2.txt
+echo "This is in subdir1" > test_dir/subdir1/subfile1.txt
+echo "This is in subdir2" > test_dir/subdir2/subfile2.txt
+
+Now, let's verify the structure we've created:
+tree test_dir
+
 
