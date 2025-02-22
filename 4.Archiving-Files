@@ -124,5 +124,17 @@ tar -tzvf test_combined.tar.gz
 The -z option here tells tar that we're dealing with a gzip-compressed file.
 
 
+Extracting Files from a Compressed Archive
+Now that we've created compressed archives, it's important to know how to extract files from them. Let's extract the contents of our test_combined.tar.gz file:
+
+Let's break down this command:
+
+mkdir extracted: This creates a new directory called extracted where we'll put the contents of our archive.
+tar: The command we're using to extract the archive.
+-x: This option tells tar to extract files from an archive.
+-z: This option is needed because we're dealing with a gzip-compressed file.
+-v: This makes the operation verbose, showing us each file as it's extracted.
+-f: This is followed by the name of the archive file we want to extract from.
+-C extracted: This option tells tar to change to the extracted directory before extracting files.
 
 
