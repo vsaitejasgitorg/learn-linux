@@ -158,3 +158,18 @@ unzip -d unzipped_files test_archive.zip
 The -d option specifies the directory to unzip into. If unzipped_files doesn't exist, unzip will create it.
 
 Zip files have the advantage of being easily recognizable and usable on virtually all operating systems, making them a good choice for sharing files with users on different platforms.
+
+Summary
+In this lab, we've learned several important file packaging and compression techniques commonly used in Linux:
+
+We created a sample directory structure to work with, demonstrating how to organize files and directories.
+We used tar to package files without compression, which is useful for bundling multiple files and directories together.
+We learned how to extract files from a tar archive, an essential skill when working with packaged files.
+We used gzip to compress files, which can significantly reduce file sizes for storage or transfer.
+We learned the difference between packaging and compression, understanding their distinct purposes and use cases.
+We learned how to combine tar and gzip to create compressed archives in one step, a common operation in Linux systems.
+We practiced extracting files from compressed archives, another crucial skill when working with packaged and compressed files.
+Finally, we used zip for creating archives with better cross-platform compatibility, particularly useful when sharing files with Windows users.
+These skills are essential for efficient file management in Linux, especially when dealing with large amounts of data or when transferring files between systems. Remember, compression can significantly reduce file sizes, making storage and transfer much more efficient.
+
+As you continue working with Linux, you'll find these commands invaluable for managing your files and directories. Practice these operations to become proficient in file packaging and compression techniques.
