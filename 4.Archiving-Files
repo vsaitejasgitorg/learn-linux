@@ -11,4 +11,13 @@ echo "This is in subdir2" > test_dir/subdir2/subfile2.txt
 Now, let's verify the structure we've created:
 tree test_dir
 
+Packaging Files with tar
+Now that we have our sample directory structure, let's learn about packaging files using the tar command. tar stands for "tape archive" and was originally used to create archives on tape drives. Today, it's commonly used to bundle multiple files and directories into a single file.
+
+Let's package our test_dir:
+cd ~/project
+tar -cvf test_archive.tar test_dir
+
+
+
 
