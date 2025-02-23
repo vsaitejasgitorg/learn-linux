@@ -172,4 +172,3 @@ We practiced extracting files from compressed archives, another crucial skill wh
 Finally, we used zip for creating archives with better cross-platform compatibility, particularly useful when sharing files with Windows users.
 These skills are essential for efficient file management in Linux, especially when dealing with large amounts of data or when transferring files between systems. Remember, compression can significantly reduce file sizes, making storage and transfer much more efficient.
 
-As you continue working with Linux, you'll find these commands invaluable for managing your files and directories. Practice these operations to become proficient in file packaging and compression techniques.
