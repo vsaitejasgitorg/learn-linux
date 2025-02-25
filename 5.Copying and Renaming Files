@@ -56,3 +56,8 @@ cp: The copy command.
 ~/project/website: This is the source directory we're copying.
 ~/project/website_backup: This is the new directory where we're copying everything.
 
+Verify the backup was created successfully:
+ls -R ~/project/website_backup
+You should see the entire directory structure and files listed. The -R option with ls shows the contents of directories recursively.
+
+
