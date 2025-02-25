@@ -1,0 +1,18 @@
+How to understand the difference between hard and symbolic links in Linux?
+
+Introduction
+Linux file systems offer more than just simple data containers - they also include special entities called file links. 
+These links provide a way to access the same file content through different names or locations, offering flexibility and efficiency in file management. 
+
+What are File Links?
+A file link is a reference to the actual file data stored in the file system. 
+When you create a file, the operating system assigns a unique identifier called an inode to that file. 
+The inode contains information about the file, such as its permissions, ownership, and the physical location of the file data on the storage device.
+
+File links come in two main types:
+
+Hard Links: A hard link is a direct reference to the inode of the file. When you create a hard link, you're essentially creating an additional name for the same file data, 
+without duplicating the actual file content.
+Symbolic (Soft) Links: A symbolic link, also known as a symlink, is a special type of file that contains a reference to another file or directory. 
+Unlike hard links, symbolic links store the path to the target file or directory, rather than a direct reference to the inode.
+
