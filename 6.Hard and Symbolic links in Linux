@@ -46,3 +46,19 @@ The output of the ls -li command will show the inode numbers and file types for 
 In this example, file1.txt and file2.txt share the same inode, indicating they are hard links to the same file data. symlink.txt is a symbolic link that points to file1.txt.
 
 
+Hard Links vs. Symbolic Links
+While both hard links and symbolic links provide a way to access the same file content, they differ in their fundamental characteristics and use cases. 
+Understanding the differences between these two types of file links is crucial for effective file management in the Linux environment.
+
+Hard Links
+Hard links are direct references to the inode of the file. They share the same inode number and point to the same physical file data on the storage device. 
+This means that hard links do not consume additional storage space, as they are simply alternative names for the same file. 
+When you delete a hard link, the file data remains accessible through the other hard links, and the file is only deleted when the last hard link is removed.
+
+Symbolic Links
+Symbolic links, also known as soft links, are special files that contain a reference to another file or directory.
+Unlike hard links, symbolic links store the path to the target file or directory, rather than a direct reference to the inode. 
+This means that symbolic links can cross file system boundaries and can reference files or directories that are not in the same file system. 
+However, if the target file is deleted or moved, the symbolic link will become broken and will no longer be able to access the original file.
+
+
