@@ -22,4 +22,13 @@ cp: The copy command.
 ~/project/favorite_song.mp3: The source file we're copying.
 ~/project/music/: The destination directory. Notice the trailing slash (/) - this tells cp that music is a directory.
 
+Copying Multiple Files at Once
+You can copy multiple files in a single command, which is useful for batch operations. Let's organize your document collection.
 
+cp ~/project/report1.txt ~/project/report2.txt ~/project/notes.txt ~/project/documents/
+
+This command copies report1.txt, report2.txt, and notes.txt to the documents directory. Here's how it works:
+
+cp: The copy command.
+~/project/report1.txt ~/project/report2.txt ~/project/notes.txt: These are the source files we're copying. You can list as many files as you need, separated by spaces.
+~/project/documents/: This is the destination directory.
