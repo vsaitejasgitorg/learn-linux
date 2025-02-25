@@ -60,4 +60,14 @@ Verify the backup was created successfully:
 ls -R ~/project/website_backup
 You should see the entire directory structure and files listed. The -R option with ls shows the contents of directories recursively.
 
+Preserving File Attributes with the -p Option
+When copying files, you might want to preserve the original file's attributes such as timestamps and permissions. The -p option does this for you.
+cp -p ~/project/old_file.txt ~/project/preserved_file.txt
+The -p option stands for "preserve". It maintains the original file's modification time, access time, and permissions.
+Let's compare the attributes of both files:
+ls -l ~/project/old_file.txt ~/project/preserved_file.txt
+
+You should see that both files have the same date and time. If they differ, make sure you used the -p option with cp.
+
+
 
