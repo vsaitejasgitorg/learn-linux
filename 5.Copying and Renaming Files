@@ -125,6 +125,27 @@ home.html is the new name we want to give the file (the destination)
 When the source and destination are in the same directory, mv understands that we want to rename the file rather than move it.
 
 
+Moving Multiple Files
+Often, you'll need to move multiple files at once. Let's organize our JavaScript files by moving them into a scripts directory.
+
+First, create a new directory for scripts using the mkdir command:
+mkdir scripts
+
+Now, we'll use the mv command to move all .js files into the scripts directory:
+mv *.js scripts/
+
+Let's break down this command:
+
+mv is our command to move files
+*.js is a pattern that matches all files ending with .js. The * is a wildcard that means "match any characters"
+scripts/ is our destination directory
+
+This command will move all JavaScript files (files ending with .js) into the scripts directory.
+
+To verify the move, use the ls command to check the contents of the scripts directory: ls scripts/
+
+
+
 
 
 
