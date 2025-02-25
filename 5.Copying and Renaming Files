@@ -42,3 +42,17 @@ cp -i ~/project/new_test_file.txt ~/project/test_file.txt
 When prompted, type y and press Enter to overwrite the file. If you don't want to overwrite, type n and press Enter.
 
 The -i option stands for "interactive". It tells cp to ask for confirmation before overwriting any existing files. This is a safety measure to prevent accidental data loss.
+
+
+Recursive Copying with the -r Option
+The -r option allows you to copy directories and their contents recursively. This is particularly useful for backing up entire directory structures.
+
+cp -r ~/project/website ~/project/website_backup
+
+This command copies the website directory and all its contents to a new directory called website_backup. Here's what each part means:
+
+cp: The copy command.
+-r: This option stands for "recursive". It tells cp to copy directories and their contents.
+~/project/website: This is the source directory we're copying.
+~/project/website_backup: This is the new directory where we're copying everything.
+
