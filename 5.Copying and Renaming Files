@@ -1,4 +1,4 @@
-Understanding the Basic cp Command
+## Understanding the Basic cp Command
 The cp command is fundamental for duplicating files in Linux.
 
 cp ~/project/important_report.txt ~/project/important_report_backup.txt
@@ -68,6 +68,50 @@ Let's compare the attributes of both files:
 ls -l ~/project/old_file.txt ~/project/preserved_file.txt
 
 You should see that both files have the same date and time. If they differ, make sure you used the -p option with cp.
+
+Using Wildcards for Selective Copying
+Wildcards allow you to copy multiple files based on patterns. This is useful when you want to copy files of a certain type or with specific naming conventions.
+
+Using Wildcards for Selective Copying
+Wildcards allow you to copy multiple files based on patterns. This is useful when you want to copy files of a certain type or with specific naming conventions.
+
+Let's copy all text files to the text_files directory:
+cp ~/project/*.txt ~/project/text_files/
+And copy all PDF files to the pdf_files directory:
+cp ~/project/*.pdf ~/project/pdf_files/
+
+Here's what the wildcard (*) means:
+
+*.txt matches any file that ends with ".txt"
+*.pdf matches any file that ends with ".pdf"
+This allows you to copy multiple files without listing them individually.
+
+Verify the files were copied correctly:
+
+ls ~/project/text_files
+ls ~/project/pdf_files
+
+## Moving files
+Let's assume project directory structure as shown below
+labex:project/ $ ls
+images  index.html  script.js  styles.css  utils.js
+
+Now, let's move a file to organize our project structure better. We'll move the styles.css file into a new directory called css.
+mkdir css
+
+Now, let's use the mv command to move styles.css into the css directory:
+mv styles.css css/
+
+Let's break down this command:
+
+mv is the command we're using to move files
+styles.css is the source file we want to move
+css/ is the destination directory where we want to move the file
+The forward slash after css indicates that it's a directory. Including the slash is optional but can help clarify that we're moving the file into a directory.
+
+Verify ; $ ls css/
+
+
 
 
 
