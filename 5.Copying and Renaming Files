@@ -10,3 +10,16 @@ cp: This is the command for copying files.
 ~/project/important_report_backup.txt: This is the destination file. We're creating a new file with "_backup" added to the name.
 
 
+Copying Files to Different Directories
+
+Now, let's copy a music file from your project directory to the music directory:
+
+cp ~/project/favorite_song.mp3 ~/project/music/
+
+This command copies favorite_song.mp3 from your project directory to the music directory. Let's break down the command:
+
+cp: The copy command.
+~/project/favorite_song.mp3: The source file we're copying.
+~/project/music/: The destination directory. Notice the trailing slash (/) - this tells cp that music is a directory.
+
+
