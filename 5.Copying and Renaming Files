@@ -111,6 +111,20 @@ The forward slash after css indicates that it's a directory. Including the slash
 
 Verify ; $ ls css/
 
+## Renaming a File
+Sometimes, we need to rename files to follow naming conventions or update versions. The mv command can also be used to rename files.
+
+Let's rename index.html to home.html. We'll use the mv command again, but this time both the source and destination will be in the same directory:
+
+mv index.html home.html
+
+In this command:
+
+index.html is the current name of the file (the source)
+home.html is the new name we want to give the file (the destination)
+When the source and destination are in the same directory, mv understands that we want to rename the file rather than move it.
+
+
 
 
 
