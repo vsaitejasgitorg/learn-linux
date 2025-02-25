@@ -1,1 +1,12 @@
+Understanding the Basic cp Command
+The cp command is fundamental for duplicating files in Linux.
+
+cp ~/project/important_report.txt ~/project/important_report_backup.txt
+
+This command creates a copy of important_report.txt named important_report_backup.txt in the same directory. Here's what each part of the command means:
+
+cp: This is the command for copying files.
+~/project/important_report.txt: This is the source file we want to copy. The ~ symbol represents your home directory.
+~/project/important_report_backup.txt: This is the destination file. We're creating a new file with "_backup" added to the name.
+
 
