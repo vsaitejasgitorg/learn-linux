@@ -25,6 +25,8 @@ cp: The copy command.
 Copying Multiple Files at Once
 You can copy multiple files in a single command, which is useful for batch operations. Let's organize your document collection.
 
+
+
 cp ~/project/report1.txt ~/project/report2.txt ~/project/notes.txt ~/project/documents/
 
 This command copies report1.txt, report2.txt, and notes.txt to the documents directory. Here's how it works:
@@ -145,8 +147,18 @@ This command will move all JavaScript files (files ending with .js) into the scr
 To verify the move, use the ls command to check the contents of the scripts directory: ls scripts/
 
 
+Using the -i Option for Safe Moves
+When moving files, it's good practice to use the -i option to prevent accidental overwrites. 
+The -i option stands for "interactive" and will prompt you before overwriting an existing file.
 
 
+mv -i test.txt home.html
 
+You will be prompted with a message similar to:
+mv: overwrite 'home.html'?
+
+This is asking if you want to overwrite the existing home.html file with test.txt. Type n and press Enter to cancel the operation.
+
+The -i option is very useful when you're not sure if you might be overwriting important files. It gives you a chance to reconsider before making changes.
 
 
