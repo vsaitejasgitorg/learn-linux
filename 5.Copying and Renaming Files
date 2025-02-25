@@ -33,4 +33,12 @@ cp: The copy command.
 ~/project/report1.txt ~/project/report2.txt ~/project/notes.txt: These are the source files we're copying. You can list as many files as you need, separated by spaces.
 ~/project/documents/: This is the destination directory.
 
+Using the -i Option for Interactive Copying
+When copying files, you might encounter situations where the destination already contains a file with the same name. 
+The -i option makes cp interactive, prompting you before overwriting existing files.
 
+cp -i ~/project/new_test_file.txt ~/project/test_file.txt
+
+When prompted, type y and press Enter to overwrite the file. If you don't want to overwrite, type n and press Enter.
+
+The -i option stands for "interactive". It tells cp to ask for confirmation before overwriting any existing files. This is a safety measure to prevent accidental data loss.
