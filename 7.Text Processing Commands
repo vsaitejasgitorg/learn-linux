@@ -56,5 +56,16 @@ one
 two
 Say, you want to append “three” to this file. You can use the >> operator in this case:
 
->_echo "three" >> numbers.txt
+echo "three" >> numbers.txt
 If you use only the > then it will replace the content of the file with “three”.
+
+The < operator is used to read from a file and then act on it. For example:
+
+wc -l < numbers.txt > lines.txt
+The above command takes the input of the wc line count command from the numbers.txt file and redirects the line count to a file called lines.txt
+
+
+The 2> operator is used to redirect error messages to a particular file. 
+This is useful when you’re executing a command or a script on your system and want to capture the error if something goes wrong:
+
+$ kubectl apply -f namespace.yaml 2> error.txt
