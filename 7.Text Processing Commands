@@ -69,3 +69,21 @@ The 2> operator is used to redirect error messages to a particular file.
 This is useful when you’re executing a command or a script on your system and want to capture the error if something goes wrong:
 
 $ kubectl apply -f namespace.yaml 2> error.txt
+
+Using Both Together
+You can redirect both stdout and stderr to separate or the same files:
+
+Redirect stdout and stderr separately:
+
+ls existing_dir non_existing_dir > output.txt 2> error.txt
+
+output.txt: Stores successful command output.
+error.txt: Stores error messages.
+
+Redirect both stdout and stderr to the same file:
+
+ls existing_dir non_existing_dir > all_output.txt 2>&1
+
+2>&1 means "redirect stderr (2>) to where stdout (1>) is going".
+all_output.txt will contain both normal output and errors.
+
