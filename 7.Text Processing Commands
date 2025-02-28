@@ -4,3 +4,8 @@ By mastering Linux text processing commands, you can complete tasks more efficie
 
 These commands are especially useful in several scenarios, such as when working with log files during debugging, in CI/CD pipelines, or when handling large amounts of data.
 
+A Brief Overview Of STDIN, STDOUT & STDERR
+
+Standard input (stdin), standard output (stdout), and standard error (stderr) are the three standard streams that allow users to interact with commands and scripts in Linux. 
+Understanding how to use these streams is crucial for efficiently working with Linux commands and scripts. 
+Without a clear understanding of stdin, stdout, and stderr, it can be challenging to effectively manage command output.
