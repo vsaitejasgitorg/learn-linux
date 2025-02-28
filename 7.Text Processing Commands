@@ -22,3 +22,11 @@ It can be the terminal or a file on the system (if you’ve enough privileges).
 Stderr - Short for Standard error, It’s an output stream that the program writes error to. 
 Similar to standard output, you can redirect the output error message to a file using 2> operator.
 
+Pipes & Redirection
+Pipes and redirections are used when you want to combine two or more commands together. 
+For example, the first command can write a stream of output to a file, and the second command can operate on that file.
+
+$ echo "Hello World" | tr [a-z] [A-Z]  
+Output:
+HELLO WORLD
+
