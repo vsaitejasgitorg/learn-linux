@@ -9,3 +9,16 @@ A Brief Overview Of STDIN, STDOUT & STDERR
 Standard input (stdin), standard output (stdout), and standard error (stderr) are the three standard streams that allow users to interact with commands and scripts in Linux. 
 Understanding how to use these streams is crucial for efficiently working with Linux commands and scripts. 
 Without a clear understanding of stdin, stdout, and stderr, it can be challenging to effectively manage command output.
+
+Stdin - short for Standard input, It’s the way you give input to a program. For example:
+
+grep something file.txt
+The command above reads the content of the file, search for a pattern, then prints the result of the search in your shell. 
+In this case, the content of file.txt is stdin. 
+
+Stdout - Short for Standard output, It’s an output stream that a program writes its output data. 
+It can be the terminal or a file on the system (if you’ve enough privileges).
+
+Stderr - Short for Standard error, It’s an output stream that the program writes error to. 
+Similar to standard output, you can redirect the output error message to a file using 2> operator.
+
