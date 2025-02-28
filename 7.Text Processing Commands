@@ -30,3 +30,31 @@ $ echo "Hello World" | tr [a-z] [A-Z]
 Output:
 HELLO WORLD
 
+In the above command we have taken the output of the first command and then passed it through the tr command which capitalized all the letters.
+
+
+Redirection.
+
+Most commonly, when we interact with Unix-like systems, the keyboard is the standard input and the terminal is the standard output. 
+However, the file can also be the standard input or output. We can read from a file and use it as the input for a command. 
+Similarly, We can also write the output of a command to a file. This is called redirection.
+The following operators are used for redirection operations:
+
+The > operator is used to redirect the output of a command to a file:
+
+>_curl -L https://GitHub.com/earthly/earthly/raw/main/README.md > README.md
+
+The above command read the content of the README.md file of the earthly repository and write its content to a README.md file on your local system.
+
+
+The >> operator is used to append the output of a command to the end of an existing file or write to a new file.
+
+For example, If you’ve a file already in your local system and you want to add new content to the end of file then you can use the >> operator:
+
+$ cat numbers.txt
+one
+two
+Say, you want to append “three” to this file. You can use the >> operator in this case:
+
+>_echo "three" >> numbers.txt
+If you use only the > then it will replace the content of the file with “three”.
