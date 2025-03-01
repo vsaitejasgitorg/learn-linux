@@ -166,3 +166,30 @@ ben
 
 There are other useful flags that you can use with the sort command. 
 Some of the common flags include -f to ignore-case and the -o flag to write the output to a particular file.
+
+
+The tac Command
+The tac command prints the content of your file in the reverse order. 
+If you’re familiar with the cat command, the tac command just returns the reverse of the output of the cat command.
+
+$ cat numbers.txt
+Output:
+one
+two
+three
+four
+five
+
+When you execute tac numbers.txt, it reverses the order of the content of the file as shown below:
+
+tac numbers.txt
+Output:
+
+five
+four
+three
+two 
+one
+
+A common use case of the tac command is in reading the content of log files. 
+The tac command reverses the content of the log file. This shows the latest logs first.
