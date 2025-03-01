@@ -247,3 +247,14 @@ Output:
 This command is helpful when you want to remove the duplicate entries/lines from a file.
 
 
+The sedCommand
+The [sed] is used to perform various operations on text streams, including search-and-replace, text filtering, and line numbering. 
+Let consider this example that search and substitutes k8s with kubernetes in a blog content.
+$ sed 's/k8s/kubernetes/g' blog.md
+
+In the above case, s means that we want to substitute a word, k8s is the word we want to substitute and kubernetes is the word that we want to substitute for k8s.
+g in the command means that we want this command to be executed in global scope which means that every instance of the match will be replaced.
+
+If you call the command without the g, only the first instance of k8s will be replaced by kubernetes:
+
+
