@@ -193,3 +193,57 @@ one
 
 A common use case of the tac command is in reading the content of log files. 
 The tac command reverses the content of the log file. This shows the latest logs first.
+
+
+The uniq Command
+The uniq command is used to report or omit repeated lines. This command only print unique lines.
+
+You can filter out the repeated line by using the uniq command:
+
+$ uniq names.txt
+Output:
+
+Outputjohn
+jane
+john
+jane
+john
+The uniq command will remove only the adjacent repeated lines. In this case, there are no adjacent repeated lines, so the output will be the same as the input.
+
+To remove all repeated lines from the file, you can use the -u option with the sort command like this:
+
+>_$ sort names.txt | uniq -u
+This will sort the file contents and then remove all non-unique lines. The output will be empty because all lines in the original file were repeated.
+
+The uniq command considers a line to be duplicate if they are adjacent to each other.
+
+To understand the uniq command better, let’s change the content of the above file. Let’s create a temp.txt file and add the following content in it:
+
+>_$ cat temp.txt
+Output:
+
+
+jane
+jane
+john
+john
+john 
+When can execute the uniq command on this new file:
+
+>_$ uniq temp.txt 
+Output:
+
+jane
+john
+Since the file had repeated lines, the uniq command only removed the adjacent repeated lines and left the unique lines intact.
+
+You can also use -c flag to count the number of occurrence of each line:
+
+>_$ uniq -c temp.txt
+Output:
+
+2 jane
+3 john
+This command is helpful when you want to remove the duplicate entries/lines from a file.
+
+
