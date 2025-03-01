@@ -87,3 +87,53 @@ ls existing_dir non_existing_dir > all_output.txt 2>&1
 2>&1 means "redirect stderr (2>) to where stdout (1>) is going".
 all_output.txt will contain both normal output and errors.
 
+
+
+Basic Linux Text Processing Commands
+
+The cut Command
+The cut command is used to cut out sections from each line of files and write the result to standard output. 
+You can use it to extract a specific column from a file and print the column to the standard output.
+
+$ gh gist list | cut -f 1
+Output
+8d1526fc09b5fc671994dbc0d4c7f8d7
+5f15a60452277a5c7deb0c6b15a5a3f2
+508bcea1782e7aed3b03f30fe053823a
+
+In the command above, the gh gist list lists your gists and the cut -f 1 extracts the first field (i.e., the ID) from each line of the output. 
+The fields are separated by whitespace.
+
+The -f option is used to specify which fields to extract, and 1 specifies the first field.
+
+You can also use the cut command to get a specific column from a CSV file.
+$ cat demo.csv
+
+name,age,language,hobby
+john,21,golang,painting
+jane,22,python,singing
+jack,25,java,reading
+jill,23,python,cooking
+
+
+You can get the name field with the following command:
+$ cut -d ',' -f 1 demo.csv
+
+name
+john
+jane
+jack
+jill
+
+The -d option stands for delimiter, and here the delimiter is a comma.
+
+The cutcommand also supports selection of a range of fields. You can select from the second to the fourth field as shown below:
+
+$ cut -d ',' -f 2-3 demo.csv
+
+age,language,hobby
+21,golang,painting
+22,python,singing
+25,java,reading
+23,python,cooking
+
