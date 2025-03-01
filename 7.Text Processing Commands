@@ -137,3 +137,32 @@ age,language,hobby
 25,java,reading
 23,python,cooking
 
+
+The sortCommand
+The sort command is used to arrange lines in a text files in a specific order. By default, the sort command sorts the content of a file in ascending order.
+
+$ cat names.txt
+
+peter
+ben
+john
+
+You can sort the content of this file by executing the following command:
+
+$ sort names.txt
+
+ben
+john
+peter
+
+You can sort the content in descending order with the -r flag as shown below:
+$ sort -r names.txt
+
+Output:
+
+peter
+john
+ben
+
+There are other useful flags that you can use with the sort command. 
+Some of the common flags include -f to ignore-case and the -o flag to write the output to a particular file.
