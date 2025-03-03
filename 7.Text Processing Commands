@@ -292,3 +292,14 @@ age
 12
 The -F flag in the above command sets the field separator to , which means awk will treat the file as a comma-separated value. 
 With {print $2}, awk goes through each line of the file and prints the second field with.
+
+To compute the sum of the ages in the file:
+
+>_$ awk -F , '{sum+=$2} END {print sum}' demo.csv
+Output:
+
+103
+
+The above command calculates the sum of the second field in the file. 
+The {sum+=2} will look at the second value in every field and then add it to the sum variable. 
+The END {print sum} will be executed when all the lines are processed and prints out the final value of the sum variable.
