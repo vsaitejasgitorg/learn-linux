@@ -303,3 +303,18 @@ Output:
 The above command calculates the sum of the second field in the file. 
 The {sum+=2} will look at the second value in every field and then add it to the sum variable. 
 The END {print sum} will be executed when all the lines are processed and prints out the final value of the sum variable.
+
+
+While performing numerical computation on the content of a file, you can ignore the first line of the file in case it is a heading which are most cases,
+strings:
+
+>_$ awk -F , 'NR>1 {print $2}' demo.csv
+Output:
+
+21
+22
+25
+23
+12
+NR refers to the number of records. NR>1 in the above examples means that it will not include the first record, which is the heading and not numeric data (age).
+
