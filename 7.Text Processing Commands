@@ -258,3 +258,8 @@ g in the command means that we want this command to be executed in global scope 
 If you call the command without the g, only the first instance of k8s will be replaced by kubernetes:
 
 
+The awk Command
+The awk command is a versatile tool that can help you in text processing, searching for patterns in a file, scripting etc.
+
+With the help of awk, you can do very advanced text processing like summing up numbers in a column of a file, Filtering based on a condition, Grouping and aggregating data etc . 
+In this tutorial, you will use the awk command to select and sum the columns from the fields of a CSV file and also use it to filter out the content of a file.
