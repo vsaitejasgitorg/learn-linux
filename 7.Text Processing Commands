@@ -318,3 +318,21 @@ Output:
 12
 NR refers to the number of records. NR>1 in the above examples means that it will not include the first record, which is the heading and not numeric data (age).
 
+
+You can also use awk to filter out the content of a file. Here’s an awk script that will filter out all the links from your markdown document:
+
+>_awk 'match($0, /\[([^\]]*)\]\(([^\)]*)\)/, a) \
+{print "["a[1]"] ==> ("a[2]")"}' file.md
+Output:
+
+# truncated
+[cut] ==> (https://man7.org/linux/man-pages/man1/cut.1.html)
+[sort] ==> (https://man7.org/linux/man-pages/man1/sort.1.html)
+[tac] ==> (https://man7.org/linux/man-pages/man1/tac.1.html)
+[uniq] ==> (https://man7.org/linux/man-pages/man1/uniq.1.html)
+
+The above command retrieves all the links from a markdown document. The link in a standard Markdown looks as shown below:
+
+Output[Earthly](https://earthly.dev/)
+So,the above command retrieves the link by looking for the pattern that matches how a link is embedded in a standard markdown. 
+You can further use this to check if links are accessible or not.
