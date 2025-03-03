@@ -278,3 +278,17 @@ jack,25,java,reading
 jill,23,python,cooking
 jake,12,rust,hiking
 
+To get the age field which is the second field:
+
+>_$ awk -F , '{print $2}' demo.csv
+
+Output:
+
+age
+21
+22
+25
+23
+12
+The -F flag in the above command sets the field separator to , which means awk will treat the file as a comma-separated value. 
+With {print $2}, awk goes through each line of the file and prints the second field with.
