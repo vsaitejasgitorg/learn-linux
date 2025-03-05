@@ -375,4 +375,37 @@ echo $ | tr '[:upper:]' '[:lower:]'
 
 This will ensure that your repository name is always in lowercase, which is required for container image tags.
 
+The wc Command
+wc stands for word count. It is a command that you can use to count the number of lines, words, and characters in a file. 
+By default, the wc command counts and returns the three. 
+To count them individually, you can specify the -l, -w, and -c flags for the number of lines, words, and characters respectively.
 
+
+For example, if you have a file that has the following content:
+
+>_$ cat markdown.md
+
+Markdown is a lightweight markup language for \
+creating formatted text using a plain-text editor.
+
+When you execute wc markdown.md then you get the following output:
+
+>_$ wc markdown.md
+1 14 97 markdown.md
+
+You specify the flag individually
+
+For line count:
+
+>_$ wc -l markdown.md
+1 markdown.md
+
+For word count:
+
+>_$ wc -w markdown.md
+14 markdown.md
+
+For character count:
+
+>_$ wc -c markdown.md
+97 markdown.md
