@@ -357,3 +357,22 @@ And it will return hello world.
 You can also use the following syntax for the same purpose.
 >_echo "Hello" | tr [:upper] [:lower]
 
+Here is a practical example that you might encounter. 
+Let’s say you have a project called “CoolProject” on GitHub and you are using a prebuilt workflow that relies on the $ variable as a tag for your container image.
+When the workflow is triggered, this variable will be replaced with the name of your repository. 
+However, if your repository name includes uppercase letters, you may encounter an error similar to this:
+
+
+OutputError parsing reference: "ghcr.io/username/CoolProject" \
+is not a valid repository/tag: invalid reference format: \
+repository name must be lowercase
+
+
+To avoid this error, you can use the tr command to convert the repository name to lowercase and use the result as the tag for your image. 
+You can achieve this by passing $ to the tr command as shown below:
+
+echo $ | tr '[:upper:]' '[:lower:]'
+
+This will ensure that your repository name is always in lowercase, which is required for container image tags.
+
+
