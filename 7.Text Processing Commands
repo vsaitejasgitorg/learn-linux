@@ -443,3 +443,41 @@ Output:
       "size": 525
     },
 In this case, you’re inspecting the container and saving the output to a file for future reference. The output is redirected to both the terminal and the file.
+
+
+
+The xargs Command
+The xargs command allows you to pass the output of one command as an argument to another command.
+
+The syntax is as shown below:
+
+>_command1 | xargs command2
+
+In this case, the output of command1 will act as the input for command2. Thexargs command has flags that will give you more control on how you want the arguments to be processed.
+
+One common use case of the xargs command is to perform batch operation on a large number of files.
+
+For example, if you want to delete all files in the current working directory, you can use the ls command to list all the files, and then pass the output to the xargs which will execute the rm command on each file. This is shown below:
+
+>_ls | xargs rm
+
+
+The first command lists all the files in the current working directory using the ls command. The output of ls is then piped to the xargs, which takes each file name as an argument and passes it to the rm command. The rm command then deletes each file in one go.
+
+It is important to note that this command can be very dangerous if used improperly as it will delete the files without asking for confirmation.
+
+You can use -p or --interactive flag to prompt the user before running the command that follows:
+Piping the output of ls to the rm command with the command xargs in interactive mode:
+
+>_$ ls | xargs -p rm
+
+Output:
+
+rm one.txt three.txt two.txt?...yes
+
+
+You can also use the xargs command when a particular command or subcommand is only accepting a limited number of arguments at a time, but you want to operate simultaneously on a number of arguments which is more than the limit.
+
+Let’s take another example to understand the xargs command.
+
+
