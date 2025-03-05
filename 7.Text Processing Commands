@@ -481,3 +481,71 @@ You can also use the xargs command when a particular command or subcommand is on
 Let’s take another example to understand the xargs command.
 
 
+To delete multiple GitHub gists, you can use the gh delete command with the gist ID as an argument. To get the IDs of all gists in a repo, you can use gh gist list | cut -f 1. However, when passing the IDs to the delete command using xargs, it will throw an error because delete only accepts one ID at a time. To resolve this, You can use xargs -n 1 to pass one ID at a time, and confirm each deletion using -p.
+
+
+List all the gists in a github repo:
+
+>_$ gh gist list
+
+Output:
+
+Outputae426cdcd4ab4b5ceedd9a517c552b51 alacritty.yml \
+1 file secret about 1 minute ago
+0d69d3058f2250021f5de610e710de84 config.fish \
+1 file secret about 1 minute ago
+acadcd47046bfe82ce548c98ac928f35 init.lua \
+1 file secret about 1 minute ago
+508bcea1782e7aed3b03f30fe053823a after.txt \
+1 file secret about 6 days ago
+
+Get the ids of all the gists using the cut command (You can also use awk):
+
+>_$ gh gist list | cut -f 1
+
+Output:
+
+ae426cdcd4ab4b5ceedd9a517c552b51
+0d69d3058f2250021f5de610e710de84
+acadcd47046bfe82ce548c98ac928f35
+508bcea1782e7aed3b03f30fe053823a
+
+
+Pipe gh gist delete to delete all the gists:
+
+>_$ gh gist list | cut -f 1 | gh gist delete
+
+
+Output:
+
+Outputcannot delete: gist argument required
+
+Usage: gh gist delete {<id> | <url>} [flags]
+
+
+The above command is giving us an error that says gist argument required.
+
+Let’s use simple xargs and see if it works:
+
+>_$ gh gist ls | cut -f 1 | xargs gh gist delete
+
+Output:
+
+too many arguments
+
+Usage: gh gist delete {<id> | <url>} [flags]
+
+It doesn’t work because the xargs command passes all the arguments at once which the gh gist delete command doesn’t accept. In this case, we will use the -n or --max-args flag and xargs will execute the command with one argument at a time only.
+
+I’m using -p flag to prompt out on the terminal:
+
+$ gh gist ls | cut -f 1 | xargs -n 1 -p gh gist delete
+Output:
+
+gh gist delete 0548469636c528324c4b4e1fcb4e4ab3?...yes
+gh gist delete f1fc4aff1ba53f7011cf6aa4b0cc39b4?...yes
+gh gist delete fdbc6b77d5c3fee50f9bdab50668a841?...yes 
+
+The command will operate on one gist ID at a time and will ask for your confirmation before deleting this.
+
+The above command explains to you how you can use xargs to pass multiple arguments to a function which takes only one parameter.
