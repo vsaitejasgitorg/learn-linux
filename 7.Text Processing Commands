@@ -409,3 +409,37 @@ For character count:
 
 >_$ wc -c markdown.md
 97 markdown.md
+
+The tee Command
+The tee command allows you to redirect the output of an operation to multiple streams simultaneously, such as the stdout and a file. This allows you to view the output in real-time and save it for future use.
+
+A use case can be in inspecting your container image:
+
+$ docker buildx imagetools inspect --raw \
+hello-world | jq . | tee hello.json
+
+Output:
+
+# truncated 
+{
+  "manifests": [
+    {
+      "digest": "sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2f13d8c4",
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "platform": {
+        "architecture": "amd64",
+        "os": "Linux"
+      },
+      "size": 525
+    },
+    {
+      "digest": "sha256:40d0cfd0861719208ff9f7747ab3f97844eeca509df705db44a736df863b76af",
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "platform": {
+        "architecture": "arm",
+        "os": "Linux",
+        "variant": "v7"
+      },
+      "size": 525
+    },
+In this case, you’re inspecting the container and saving the output to a file for future reference. The output is redirected to both the terminal and the file.
