@@ -336,3 +336,24 @@ The above command retrieves all the links from a markdown document. The link in 
 Output[Earthly](https://earthly.dev/)
 So,the above command retrieves the link by looking for the pattern that matches how a link is embedded in a standard markdown. 
 You can further use this to check if links are accessible or not.
+
+
+
+The tr Command
+The tr command can be used to translate or delete characters from standard input and write the result to standard output. 
+Some of the common use cases of the tr command include:
+
+Translating characters from one set to another: For example, you can use the command to translate all the characters from uppercase to lowercase and vice-versa.
+
+Removing repeated characters: You can use the command to delete and remove repeating characters from a stream of text.
+
+Deleting characters: You can use them to delete specific characters from the input. For example, you can use the tr command to delete all digits from the input.
+
+The command can be really helpful if you’re performing an operation that requires small letters only, then you can use this command as shown below:
+$ echo "Hello World" | tr [A-Z] [a-z]
+
+And it will return hello world.
+
+You can also use the following syntax for the same purpose.
+>_echo "Hello" | tr [:upper] [:lower]
+
