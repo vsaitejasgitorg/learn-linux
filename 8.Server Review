@@ -36,3 +36,5 @@ Here is an example of how you can use the tail command to view the last few entr
 
 tail /var/log/auth.log
 
+
+
