@@ -8,3 +8,41 @@ echo $PATH
 Each directory in $PATH is separated by a colon (:).
 
 When you type a command (e.g., ls or python), the shell searches these directories in order and executes the first matching file.
+
+2. Executables and How They Work
+An executable is a file that can be run as a program. It can be:
+
+A binary executable (compiled program, e.g., /bin/ls)
+A script with execute permissions (e.g., myscript.sh)
+
+Find an executable’s location:
+which ls
+# Output: /bin/ls
+whereis ls
+# Output: ls: /bin/ls /usr/share/man/man1/ls.1.gz
+
+Create a script myscript.sh
+
+vim myscript.sh
+echo "Listing Present Working Directory"
+pwd
+echo "Listing files in the directory"
+ls
+
+Now if we try to execute this script, we get an error stating -bash: ./myscript.sh: Permission denied
+Because this file is not executable yet.
+list permissions of file using ls -al
+-rw-r--r--  1 saiteja saiteja    85 Mar  7 16:30 myscript.sh
+
+To change the permissions, use command chmod
+chmod +x myscript.sh
+
+Now ls -al gives -rwxr-xr-x  1 saiteja saiteja    86 Mar  7 16:31 myscript.sh
+
+Try to execute the file now,
+ ~$./myscript.sh
+Listing Present Working Directory
+/home/saiteja
+Listing files in the directory
+dir3  etc  learn-shell  myscript.sh  nested  opt  project
+
