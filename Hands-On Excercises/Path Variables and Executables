@@ -53,3 +53,6 @@ Make it executable
 Add it to $PATH
 Run it like a normal command
 
+Step 1: Create a Custom Directory for Scripts
+mkdir -p ~/my_scripts
+This creates a directory called my_scripts inside your home folder.
