@@ -46,3 +46,10 @@ Listing Present Working Directory
 Listing files in the directory
 dir3  etc  learn-shell  myscript.sh  nested  opt  project
 
+Hands-on Exercise: Path Variables and Executables
+Goal:
+Create a custom script
+Make it executable
+Add it to $PATH
+Run it like a normal command
+
