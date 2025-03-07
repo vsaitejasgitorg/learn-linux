@@ -71,5 +71,14 @@ chmod +x ~/my_scripts/hello.sh
 
 Now, you can run it like this:
 
-
 ./my_scripts/hello.sh
+
+Step 4: Add the Directory to Your $PATH
+
+export PATH=$PATH:$HOME/my_scripts
+
+Now, you can just type:
+
+hello.sh
+
+And it should run from anywhere!
