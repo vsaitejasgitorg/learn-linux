@@ -82,3 +82,11 @@ Now, you can just type:
 hello.sh
 
 And it should run from anywhere!
+
+Step 5: Make It Permanent
+To make sure this works after restarting your terminal, add the export command to ~/.bashrc:
+
+echo 'export PATH=$PATH:$HOME/my_scripts' >> ~/.bashrc
+source ~/.bashrc
+
+
