@@ -65,3 +65,11 @@ Paste this content:
 echo "Hello, $USER! This is your custom command."
 Save and exit (CTRL + X, then Y, then Enter).
 
+Step 3: Make the Script Executable
+
+chmod +x ~/my_scripts/hello.sh
+
+Now, you can run it like this:
+
+
+./my_scripts/hello.sh
