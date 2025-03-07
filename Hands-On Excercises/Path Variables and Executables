@@ -89,4 +89,11 @@ To make sure this works after restarting your terminal, add the export command t
 echo 'export PATH=$PATH:$HOME/my_scripts' >> ~/.bashrc
 source ~/.bashrc
 
+Step 6: Verify and Test
 
+echo $PATH
+which hello.sh
+hello.sh
+
+Expected Output:
+Hello, your_username! This is your custom command.
