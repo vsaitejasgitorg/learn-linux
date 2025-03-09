@@ -51,3 +51,10 @@ top
 
 # alternatively, for a more user-friendly interface
 htop
+
+
+Exploring the proc directory (/proc), we dive even deeper, enabling us to view the system’s kernel parameters and each process’s specific system details.
+
+# view specifics of a particular PID
+cat /proc/{PID}/status
+In short, ‘Finding and Listing Processes (proc)’ in Linux is not just a core aspect of process management, but also a necessary skill for enhancing system performance and resolution of issues.
