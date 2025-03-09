@@ -2,3 +2,9 @@ Process Management
 Process management is integral part of any operating system and Linux is no different. Every program running on Linux, be it an application or a system operation, is treated as a process. These processes perform different tasks but work together to provide a seamless operating experience.
 
 In Linux, users can interact and manage these processes by using different commands for various process management tasks such as viewing the currently running processes, killing processes, changing the priority of a process, and so on. Understanding these commands and how to use them effectively is essential to Linux process management.
+
+The ps command for example, provides information about the currently running processes:
+
+>_ps aux
+This will list out all the currently running processes with information such as the process ID, the user running that process, the CPU and memory it’s consuming, the command that started the process, and more.
+
