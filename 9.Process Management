@@ -34,3 +34,20 @@ And to bring it back to the foreground:
 
 fg
 These commands, bg and fg are part of job control in Unix-like operating systems, which lets you manage multiple tasks simultaneously from a single terminal.
+
+
+Listing and Finding Processes (proc)
+In Linux, processes form the backbone of any functioning system - running various tasks and executing different operations. In order to effectively manage your Linux system, it’s crucial to be able to list and find the currently running processes. This aids in monitoring system performance, tracking down any issues, and in controlling resource allocation.
+
+The proc filesystem is an extremely powerful tool in this respect. Available in all Unix-like operating systems, proc is a virtual file system that provides detailed information about running processes, including its PID, status, and resource consumption.
+
+With commands like ps, top, and htop, we can quickly list out the running processes on the Linux system. Specifically, the ps command offers an in-depth snapshot of currently running processes, whereas top and htop give real-time views of system performance.
+
+# list all running processes
+ps -ef 
+
+# display ongoing list of running processes 
+top
+
+# alternatively, for a more user-friendly interface
+htop
