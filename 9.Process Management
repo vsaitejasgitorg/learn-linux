@@ -8,3 +8,11 @@ The ps command for example, provides information about the currently running pro
 >_ps aux
 This will list out all the currently running processes with information such as the process ID, the user running that process, the CPU and memory it’s consuming, the command that started the process, and more.
 
+top is another common command. It provides a live, updating view of the current state of the system including processes:
+
+top
+
+Yet another powerful tool is kill, which can send specific signals to processes. For example, you can gracefully stop a process with SIGTERM (15) or forcefully stop one with SIGKILL (9):
+
+kill -SIGTERM pid
+kill -SIGKILL pid
