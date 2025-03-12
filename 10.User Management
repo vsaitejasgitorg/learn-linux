@@ -15,3 +15,14 @@ Where LOGIN is the login name to be created. Suppose we want to create a new acc
 $ sudo useradd newuser
 The command above will create the “newuser” account on the system; additionally an home directory will be created for the user, since, as we can see in the table above, the CREATE_HOME option is set to yes by default. It is possible to to request the creation of a home directory for the new user explicitly by using the -m (short for --create-home) option of the useradd command.
 If we instead we want to avoid the creation of said directory we should use the -M option, which is the short for --no-create-home.
+After the creation of a user, the recommended way to set its password is to use the passwd utility, remember this, is an important step!
+
+Specifying a login shell
+Another common thing we may want to specify when creating a new user, is its login shell: we can do it by using the -s option (--shell) and passing the path of the shell binary as argument. If this option is not provided explicitly, the shell specified by the $SHELL variable will be used (on Fedora it is /bin/bash). For instance, to explicitly declare the login shell of a new user, we would run:
+
+$ sudo useradd -s /bin/bash newuser
+
+Manually specify the user UID
+When a new user is created, by default, the first available uid greater or equal to that specified by the UID_MIN option in the /etc/login.defs file, greater than the one of any other user and smaller or equal to the one specified with the UID_MAX option, is assigned to him. If we want to manually specify an uid, we should use the -u (--uid) option and provide the uid value we want to use as its argument (it must be a non-negative value). To create a user with an uid of 1005 assigned manually, we would run:
+
+$ sudo useradd -u 1005 newuser
