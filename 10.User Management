@@ -5,3 +5,13 @@ For smoother and controlled operation, user management in Linux includes tasks s
 
 The entire concept of user management circles around providing proper accessibility, and maintaining the security of the Linux operating system. Other commands such as passwd for password management or su for switching users further emphasize the depth and importance of user management in Linux.
 
+Creating a new user
+To create a new user account on our Linux system we can use the useradd utility; its syntax is the following:
+
+useradd [options] LOGIN
+
+Where LOGIN is the login name to be created. Suppose we want to create a new account for the “newuser” user; we would run:
+
+$ sudo useradd newuser
+The command above will create the “newuser” account on the system; additionally an home directory will be created for the user, since, as we can see in the table above, the CREATE_HOME option is set to yes by default. It is possible to to request the creation of a home directory for the new user explicitly by using the -m (short for --create-home) option of the useradd command.
+If we instead we want to avoid the creation of said directory we should use the -M option, which is the short for --no-create-home.
