@@ -27,3 +27,4 @@ In Linux, understanding the directory hierarchy is crucial for efficient navigat
 
 Reference
 https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/4/html/reference_guide/index#index
+
